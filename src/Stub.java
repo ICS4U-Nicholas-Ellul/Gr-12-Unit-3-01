@@ -9,24 +9,26 @@
 import java.util.Scanner;
 
 public class Stub {
-
+	
 	public static void ReverseString(String sentence){
 		
 		String sentenceSubString;
-		String lastCharacter;
+		char lastCharacter;
 		String reversedText = "";
+		
+		String word = "";
 		
 		if(sentence.length() > 0){
 			
 			//gets part of string
-			sentenceSubString = sentence.substring(0, sentence.length() - 1);
-			int bob = sentence.length();
+			sentenceSubString = sentence.substring(1, (sentence.length()));
 			ReverseString(sentenceSubString);
 			
 			//outputs it
-			lastCharacter = sentence.substring(sentence.length() - 1);
-			reversedText = lastCharacter + reversedText;
-			System.out.println(reversedText);
+			lastCharacter = sentence.charAt(0);
+			reversedText =  reversedText + lastCharacter;
+			
+			System.out.print(reversedText);
 		}
 		
 	}
